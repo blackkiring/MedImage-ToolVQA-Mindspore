@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+site/
+outputs/
+data/raw/
+data/processed/
+data/images/

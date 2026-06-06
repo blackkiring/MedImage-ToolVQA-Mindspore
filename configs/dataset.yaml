@@ -1,0 +1,16 @@
+dataset:
+  name: MedImage-ToolVQA
+  train_records: data/processed/train.jsonl
+  eval_records: data/processed/eval.jsonl
+  image_root: data/images
+  output_dir: data/processed
+
+schema:
+  require_tool_trace: true
+  require_source_attribution: true
+  allowed_modalities:
+    - X-ray
+    - CT
+    - MRI
+    - Ultrasound
+    - Pathology

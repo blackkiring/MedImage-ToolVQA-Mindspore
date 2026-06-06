@@ -1,0 +1,8 @@
+evaluation:
+  records: data/processed/eval.jsonl
+  checkpoint: outputs/sft/checkpoint
+  output_file: outputs/eval/results.jsonl
+  metrics:
+    - answer_accuracy
+    - tool_call_validity
+    - observation_usage
