@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from medimage_toolvqa_ms.config import load_yaml_config
-from medimage_toolvqa_ms.training.sft_trainer import MindSporeSFTTrainer
+from medimage_toolvqa_ms.sft import MindSporeSFTTrainer
 
 
 def main() -> int:

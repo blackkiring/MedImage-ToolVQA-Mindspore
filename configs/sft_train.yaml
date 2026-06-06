@@ -1,7 +1,8 @@
 training:
   seed: 42
   model_name_or_path: Qwen/Qwen2.5-VL-7B-Instruct
-  train_records: data/processed/train.jsonl
+  train_records: data/processed/05_sft_records.jsonl
+  eval_records: data/processed/eval_sft_records.jsonl
   output_dir: outputs/sft
   max_steps: 1000
   batch_size: 1
@@ -11,3 +12,8 @@ training:
 mindspore:
   device_target: Ascend
   context_mode: graph
+
+sft_data:
+  require_messages: true
+  require_tool_observations: true
+  image_root: data/images

@@ -13,7 +13,7 @@ from medimage_toolvqa_ms.dataset_building import DatasetBuildPipeline
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Compatibility wrapper for scripts/build_dataset.py.")
+    parser = argparse.ArgumentParser(description="Build MedImage-ToolVQA dataset records.")
     parser.add_argument("--config", required=True, help="Path to dataset construction YAML config.")
     parser.add_argument("--dry-run", action="store_true", help="Only print stage summary.")
     args = parser.parse_args()

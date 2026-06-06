@@ -1,0 +1,27 @@
+dataset_building:
+  name: MedImage-ToolVQA
+  image_root: data/images
+  output_dir: data/processed
+
+inputs:
+  region_sources:
+    - data/raw/regions.jsonl
+  source_records: data/raw/source_records.jsonl
+
+outputs:
+  merged_regions: data/processed/01_merged_regions.jsonl
+  vqa_candidates: data/processed/02_vqa_candidates.jsonl
+  verified_samples: data/processed/03_verified_samples.jsonl
+  tool_trajectories: data/processed/04_tool_trajectories.jsonl
+  sft_records: data/processed/05_sft_records.jsonl
+
+quality:
+  require_tool_trace: true
+  require_source_attribution: true
+  reject_text_only_questions: true
+  allowed_modalities:
+    - X-ray
+    - CT
+    - MRI
+    - Ultrasound
+    - Pathology
